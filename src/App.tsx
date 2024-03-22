@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Pizza from './Pizza';
 
-function App() {
+const App: React.FC = () => {
   return (
-      <>
-      </>
-  )
+    <div className="App">
+      <h1>Pizza App</h1>
+      <Pizza />
+    </div>
+  );
 }
 
-export default App
-
+export default App;
