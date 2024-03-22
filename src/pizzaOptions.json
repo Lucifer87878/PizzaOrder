@@ -1,0 +1,16 @@
+{
+    "sizes": [
+      { "name": "Barn Pizza", "price": 50 },
+      { "name": "Vanlig Pizza", "price": 100 },
+      { "name": "Familje Pizza", "price": 150 }
+    ],
+    "toppings": [
+      { "name": "Ost", "price": 10 },
+      { "name": "Skinka", "price": 10 },
+      { "name": "Banan", "price": 10 },
+      { "name": "Gorgonzola", "price": 10 },
+      { "name": "Champinjoner", "price": 10 },
+      { "name": "Annanas", "price": 10 }
+    ]
+  }
+  
