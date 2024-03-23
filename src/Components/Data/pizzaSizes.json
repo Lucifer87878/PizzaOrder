@@ -1,18 +1,18 @@
 [
   {
-    "name": "Child size - Pizza",
+    "name": "Pizza - Barn",
     "size": "20.32 cm",
     "slices": 4,
     "price": "70 kr"
   },
   {
-    "name": "Adult size - Pizza",
+    "name": "Pizza - Vuxen",
     "size": "35.56cm",
     "slices": 12,
     "price": "120 kr"
   },
   {
-    "name": "Family size - Pizza",
+    "name": "Pizza - Familj",
     "size": "45.72 cm",
     "slices": 8,
     "price": "130 kr"

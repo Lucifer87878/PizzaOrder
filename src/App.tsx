@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Button from "./Components/Button";
 import PizzaSizeDropdown from "./Components/PizzaSizeDropdown/PizzaSizeDropdown";
+import Topping from "./Components/Topping.tsx/Topping";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <PizzaSizeDropdown />
       {/* <Button /> */}
+      <Topping />
     </>
   );
 }

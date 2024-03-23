@@ -31,6 +31,7 @@ const PizzaSizeDropdown = () => {
           </option>
         ))}
       </select>
+      {/*Vi displayar om en "PizzaInfoBox" "OM" en vald pizza objekt existerar */}
       {selectedPizzaObj && (
         <PizzaInfoBox
           name={selectedPizzaObj.name}

@@ -1,3 +1,8 @@
+import "../sass/_h2.scss";
+import "../sass/_paragraph.scss";
+import "../sass/_paragraph.scss";
+import "../sass/_InfoBox.scss";
+
 type PizzaType = {
   name: string;
   size: string;
@@ -8,11 +13,14 @@ type PizzaType = {
 const PizzaInfoBox = ({ name, size, slices, price }: PizzaType) => {
   return (
     <>
-      <div>
+      <div className='info-box'>
         <h2>Du har valt: </h2>
         {/* får inte glömma och skapa en scss fil för h3*/}
         <p>
-          Pizza: {name}, Storlek: {size}, Bitar: {slices}, Pris: {price},
+          <u>{name}</u> <br />
+          Storlek: {size} <br />
+          Slices: {slices} <br />
+          Pris: {price}
         </p>
       </div>
     </>

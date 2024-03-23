@@ -1,10 +1,10 @@
-import "../sass/_header.scss";
+import "../sass/_Rubrik.scss";
 
 const Header = () => {
   return (
     <>
       <div>
-        <h1>Borås Best Pizza Hut</h1>
+        <h1 className='rubrik'>Borås Best Pizza Hut</h1>
       </div>
     </>
   );
