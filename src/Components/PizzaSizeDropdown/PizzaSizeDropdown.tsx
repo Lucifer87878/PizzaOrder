@@ -1,5 +1,5 @@
 import "./sass/_buttons.scss";
-import Pizzas from "./Data/pizzaSizes.json";
+import Pizzas from "../Data/pizzaSizes.json";
 
 const PizzaSizeDropdown = () => {
   return (
