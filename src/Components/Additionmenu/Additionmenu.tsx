@@ -2,30 +2,26 @@
 // Skulle vi ha en dropdown eller checkbox? jag röstar på checkbox för då, tar
 // vi med det också som vi lärt oss på lektionen.
 
-const Topping = () => {
+const Additionmenu = () => {
   return (
     <>
       <div>
         <input type='checkbox' />
-        <label htmlFor='Extra Ost'>Extra Ost</label>
+        <label htmlFor='Extra Ost'>Extra Fetaost</label>
       </div>
       <div>
         <input type='checkbox' />
-        <label htmlFor='Extra Ost'>Extra Ktt</label>
+        <label htmlFor='Extra Ost'>Extra Kött</label>
       </div>
       <div>
         <input type='checkbox' />
-        <label htmlFor='Extra Ost'>Extra Ost</label>
+        <label htmlFor='Extra Ost'>Extra sås</label>
       </div>
       <div>
         <input type='checkbox' />
-        <label htmlFor='Extra Ost'>Extra Ost</label>
-      </div>
-      <div>
-        <input type='checkbox' />
-        <label htmlFor='Extra Ost'>Extra Ost</label>
+        <label htmlFor='Extra Ost'>Extra Lök</label>
       </div>
     </>
   );
 };
-export default Topping;
+export default Additionmenu;
