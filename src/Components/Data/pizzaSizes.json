@@ -1,20 +1,20 @@
 [
   {
-    "size": "Child - Pizza",
-    "diameter": "8 inches",
+    "name": "Child size - Pizza",
+    "size": "20.32 cm",
     "slices": 4,
-    "price": "$6.99"
+    "price": "70 kr"
   },
   {
-    "size": "Adult - Pizza",
-    "diameter": "18 inches",
+    "name": "Adult size - Pizza",
+    "size": "35.56cm",
     "slices": 12,
-    "price": "$16.99"
+    "price": "120 kr"
   },
   {
-    "size": "Family - Pizza",
-    "diameter": "14 inches",
+    "name": "Family size - Pizza",
+    "size": "45.72 cm",
     "slices": 8,
-    "price": "$12.99"
+    "price": "130 kr"
   }
 ]
