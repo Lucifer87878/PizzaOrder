@@ -1,0 +1,20 @@
+[
+  {
+    "size": "Child - Pizza",
+    "diameter": "8 inches",
+    "slices": 4,
+    "price": "$6.99"
+  },
+  {
+    "size": "Adult - Pizza",
+    "diameter": "18 inches",
+    "slices": 12,
+    "price": "$16.99"
+  },
+  {
+    "size": "Family - Pizza",
+    "diameter": "14 inches",
+    "slices": 8,
+    "price": "$12.99"
+  }
+]
