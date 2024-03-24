@@ -1,9 +1,9 @@
 import { ReactNode, useState } from "react";
 import "../sass/_Checkbox.scss";
-// Topping componenten!
-// Skulle vi ha en dropdown eller checkbox? jag röstar på checkbox för då, tar
-// vi med det också som vi lärt oss på lektionen.
+
+//Interface checkbox för att event inte skulle ha type any!
 interface checkboxProps {}
+
 const Checkbox: React.FC<checkboxProps> = () => {
   const [checkboxes, setCheckboxes] = useState({
     ost: false,
