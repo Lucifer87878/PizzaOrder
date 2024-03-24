@@ -1,0 +1,11 @@
+{
+    "toppings": [
+      { "name": "Ost", "price": 10 },
+      { "name": "Skinka", "price": 10 },
+      { "name": "Banan", "price": 10 },
+      { "name": "Gorgonzola", "price": 10 },
+      { "name": "Champinjoner", "price": 10 },
+      { "name": "Annanas", "price": 10 }
+    ]
+  }
+  

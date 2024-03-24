@@ -5,6 +5,7 @@
 const Additionmenu = () => {
   return (
     <>
+    <section className="Checkboxes">
       <div>
         <input type='checkbox' />
         <label htmlFor='Extra Ost'>Extra Fetaost</label>
@@ -21,6 +22,7 @@ const Additionmenu = () => {
         <input type='checkbox' />
         <label htmlFor='Extra Ost'>Extra Lök</label>
       </div>
+      </section>
     </>
   );
 };
