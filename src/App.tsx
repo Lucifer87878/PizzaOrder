@@ -3,8 +3,8 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Button from "./Components/Button";
 import PizzaSizeDropdown from "./Components/PizzaSizeDropdown/PizzaSizeDropdown";
-import Topping from "./Components/Additionmenu/Additionmenu";
-import Additionmenu from "./Components/Additionmenu/Additionmenu";
+import Topping from "./Components/Checkbox/Checkbox";
+import Checkbox from "./Components/Checkbox/Checkbox";
 import NavBar from "./Components/Navbar/Navbar";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <PizzaSizeDropdown />
       <Button />
-      <Additionmenu />
+      <Checkbox />
     </>
   );
 }
