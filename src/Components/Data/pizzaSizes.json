@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Pizza - Barn",
+    "size": "20.32 cm",
+    "slices": 4,
+    "price": "70 kr"
+  },
+  {
+    "name": "Pizza - Vuxen",
+    "size": "35.56cm",
+    "slices": 12,
+    "price": "120 kr"
+  },
+  {
+    "name": "Pizza - Familj",
+    "size": "45.72 cm",
+    "slices": 8,
+    "price": "130 kr"
+  }
+]

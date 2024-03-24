@@ -1,12 +1,19 @@
-import React from 'react';
-import Pizza from './Pizza';
+import { useState } from "react";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Button from "./Components/Button";
+import PizzaSizeDropdown from "./Components/PizzaSizeDropdown/PizzaSizeDropdown";
+import Topping from "./Components/Additionmenu/Additionmenu";
+import Additionmenu from "./Components/Additionmenu/Additionmenu";
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="App">
-      <h1>Pizza App</h1>
-      <Pizza />
-    </div>
+    <>
+      <Header />
+      <PizzaSizeDropdown />
+      {/* <Button /> */}
+      <Additionmenu />
+    </>
   );
 }
 
