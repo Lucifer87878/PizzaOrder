@@ -8,7 +8,7 @@ import "../Data/pizzaSizes.json";
 type PizzaType = {
   name: string;
   ingredients: ReactNode;
-  price: string;
+  price: number;
 };
 
 const PizzaInfoBox = ({ name, price, ingredients }: PizzaType) => {
@@ -23,11 +23,7 @@ const PizzaInfoBox = ({ name, price, ingredients }: PizzaType) => {
           <button>-</button>
           <br />
         </div>
-        <div className='ingredient.array'>
-          <ul>
-            Ingredienser: <li>{ingredients}</li>
-          </ul>
-        </div>
+        {/* <div>Ingredienser:{ingredients}</div> */}
       </div>
     </>
   );

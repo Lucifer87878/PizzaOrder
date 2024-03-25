@@ -11,7 +11,7 @@ const PizzaSizeDropdown = () => {
     console.log("Jag klicka på:", selectedPizza);
   };
 
-  // En find metod för att söka efter den pizzan och om den matchar the som klickats på
+  // selectedPizzaObj kollar med hjälp av find metoden om det finns en pizza med det valda namnet från dropdown menyn.
   const selectedPizzaObj = Pizzas.find((pizzaObj) => pizzaObj.name === pizza);
 
   return (
@@ -31,15 +31,22 @@ const PizzaSizeDropdown = () => {
           </option>
         ))}
       </select>
-      {/*Vi displayar om en "PizzaInfoBox" "OM" en vald pizza objekt existerar */}
-      {selectedPizzaObj?.ingredients.map((i) => {
-        <option value=''>{i}</option>;
-      }) && (
-        <PizzaInfoBox
-          name={selectedPizzaObj.name}
-          ingredients={selectedPizzaObj.ingredients}
-          price={selectedPizzaObj.price}
-        />
+      {/* selectedpizzaobj kollar om vi har information om en pizza, har vi det så körs PizzainfoBox */}
+      {selectedPizzaObj && (
+        <>
+          {/* PizzaInfoBox*/}
+          <PizzaInfoBox
+            name={selectedPizzaObj.name}
+            ingredients={selectedPizzaObj.ingredients}
+            price={selectedPizzaObj.price}
+          />
+          <ul>
+            {/* Här loopar vi igenom ännu en array (ingredients) så att dessa renderas ut som list element*/}
+            {selectedPizzaObj.ingredients.map((ingredient, index) => (
+              <li key={index}>{ingredient}</li>
+            ))}
+          </ul>
+        </>
       )}
     </>
   );
