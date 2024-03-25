@@ -1,20 +1,47 @@
 [
   {
     "name": "Pizza - Barn",
-    "size": "20.32 cm",
-    "slices": 4,
+    "ingredients": [
+      "Tomatsås",
+      "Ost",
+      "Skinka",
+      "Champinjoner",
+      "Oregano (efter smak)",
+      "Deg"
+    ],
     "price": "70 kr"
   },
   {
     "name": "Pizza - Vuxen",
-    "size": "35.56cm",
-    "slices": 12,
+    "ingredients": [
+      "Tomatsås",
+      "Ost",
+      "Skinka",
+      "Salami",
+      "Champinjoner",
+      "Paprika",
+      "Rödlök",
+      "Oliver",
+      "Oregano",
+      "Deg"
+    ],
     "price": "120 kr"
   },
   {
     "name": "Pizza - Familj",
-    "size": "45.72 cm",
-    "slices": 8,
+    "ingredients": [
+      "Tomatsås",
+      "Ost",
+      "Skinka",
+      "Salami",
+      "Champinjoner",
+      "Paprika",
+      "Rödlök",
+      "Oliver",
+      "Ananas",
+      "Oregano",
+      "Deg"
+    ],
     "price": "130 kr"
   }
 ]

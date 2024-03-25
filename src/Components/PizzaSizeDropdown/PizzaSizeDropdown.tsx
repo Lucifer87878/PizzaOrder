@@ -5,7 +5,7 @@ import PizzaInfoBox from "./PizzaInfoBox";
 const PizzaSizeDropdown = () => {
   const [pizza, setPizza] = useState("");
 
-  const handleChange = (event: { target: { value: any; }; }) => {
+  const handleChange = (event: { target: { value: any } }) => {
     const selectedPizza = event.target.value; // hämtar värdet från det som klickades på
     setPizza(selectedPizza); // uppdaterar pizza state med värdet av den valda pizzan
     console.log("Jag klicka på:", selectedPizza);
@@ -32,11 +32,12 @@ const PizzaSizeDropdown = () => {
         ))}
       </select>
       {/*Vi displayar om en "PizzaInfoBox" "OM" en vald pizza objekt existerar */}
-      {selectedPizzaObj && (
+      {selectedPizzaObj?.ingredients.map((i) => {
+        <option value=''>{i}</option>;
+      }) && (
         <PizzaInfoBox
           name={selectedPizzaObj.name}
-          size={selectedPizzaObj.size}
-          slices={selectedPizzaObj.slices}
+          ingredients={selectedPizzaObj.ingredients}
           price={selectedPizzaObj.price}
         />
       )}
