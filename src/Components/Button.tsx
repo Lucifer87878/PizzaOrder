@@ -3,7 +3,7 @@ import "./sass/_buttons.scss";
 const Button = () => {
   return (
     <>
-      <button className='button'>Click me</button>
+      <button className='CheckoutBtn'>Checkout</button>
     </>
   );
 };

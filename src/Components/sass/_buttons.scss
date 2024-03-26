@@ -1,7 +1,7 @@
 // När vi implementerar denna en knapp i vilken komponent som helst så har vi med oss
 // en färdig knapp
 
-.button {
+.CheckoutBtn {
   display: inline-block;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -25,4 +25,10 @@
   &:active {
     transform: translateY(1px);
   }
+}
+.ToppingsBtn{
+
+  display: flex;
+  flex-direction: column;
+  width: 10%;
 }

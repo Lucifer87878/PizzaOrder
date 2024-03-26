@@ -2,16 +2,16 @@ import "../sass/_h2.scss";
 import "../sass/_paragraph.scss";
 import "../sass/_paragraph.scss";
 import "../sass/_InfoBox.scss";
-import { ReactNode } from "react";
+
 import "../Data/pizzaSizes.json";
+import "../sass/_buttons.scss"
 
 type PizzaType = {
   name: string;
-  ingredients: ReactNode;
   price: number;
 };
 
-const PizzaInfoBox = ({ name, price, ingredients }: PizzaType) => {
+const PizzaInfoBox = ({ name, price,  }: PizzaType) => {
   return (
     <>
       <div className='info-box'>
@@ -19,11 +19,11 @@ const PizzaInfoBox = ({ name, price, ingredients }: PizzaType) => {
         {/* får inte glömma och skapa en scss fil för h3*/}
         <u>{name}</u> <br />
         <div>
-          Pris: {price} <button>+</button>
-          <button>-</button>
+          Pris: {price}
           <br />
         </div>
-        {/* <div>Ingredienser:{ingredients}</div> */}
+        
+        {/* <div><button>Add</button><ul>{ingredients}</ul></div> */}
       </div>
     </>
   );
