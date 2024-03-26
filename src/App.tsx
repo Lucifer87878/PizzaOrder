@@ -11,12 +11,11 @@ import ToppingsDropdown from "./Components/PizzaSizeDropdown/ToppingsDropdown";
 function App() {
   return (
     <>
-      
       <NavBar />
       <Header />
       <ToppingsDropdown />
       <PizzaSizeDropdown />
-      
+
       <Button />
       <Checkbox />
     </>

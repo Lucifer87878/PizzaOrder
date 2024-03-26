@@ -37,15 +37,15 @@ const PizzaSizeDropdown = () => {
           {/* PizzaInfoBox*/}
           <PizzaInfoBox
             name={selectedPizzaObj.name}
-            ingredients={selectedPizzaObj.ingredients}
             price={selectedPizzaObj.price}
           />
-          <ul>
-            {/* Här loopar vi igenom ännu en array (ingredients) så att dessa renderas ut som list element*/}
-            {selectedPizzaObj.ingredients.map((ingredient, index) => (
-              <li key={index}>{ingredient}</li>
-            ))}
-          </ul>
+          {/*nästlad array som renderar ut ingredienser som checkboxes */}
+          {selectedPizzaObj.ingredients.map((ingredient, index) => (
+            <div key={index}>
+              <input type='checkbox' id='index' value={ingredient} />
+              <label htmlFor={index.toString()}>{ingredient}</label>
+            </div>
+          ))}
         </>
       )}
     </>
