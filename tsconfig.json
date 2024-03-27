@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "gorans-kod/g-List.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

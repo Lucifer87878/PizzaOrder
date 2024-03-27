@@ -2,18 +2,19 @@
   {
     "name": "Pizza - Barn",
     "ingredients": [
+      "Deg",
       "Tomatsås",
       "Ost",
       "Skinka",
       "Champinjoner",
-      "Oregano",
-      "Deg"
+      "Oregano"
     ],
     "price": 70
   },
   {
     "name": "Pizza - Vuxen",
     "ingredients": [
+      "Deg",
       "Tomatsås",
       "Ost",
       "Skinka",
@@ -22,14 +23,14 @@
       "Paprika",
       "Rödlök",
       "Oliver",
-      "Oregano",
-      "Deg"
+      "Oregano"
     ],
     "price": 120
   },
   {
     "name": "Pizza - Familj",
     "ingredients": [
+      "Deg",
       "Tomatsås",
       "Ost",
       "Skinka",
@@ -39,8 +40,7 @@
       "Rödlök",
       "Oliver",
       "Ananas",
-      "Oregano",
-      "Deg"
+      "Oregano"
     ],
     "price": 130
   }

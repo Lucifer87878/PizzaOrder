@@ -1,23 +1,41 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Pizzas from "../Data/pizzaSizes.json";
 import PizzaInfoBox from "./PizzaInfoBox";
 
 const PizzaSizeDropdown = () => {
-  const [pizza, setPizza] = useState("");
+  const [pizza, setPizza] = useState<string>(""); // Specifiera typen för pizza som string
+  const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]); // Specifiera typen för selectedIngredients som string-array
+  const [totalPrice, setTotalPrice] = useState<number>(0); // Specifiera typen för totalPrice som number
 
-  const handleChange = (event: { target: { value: any } }) => {
-    const selectedPizza = event.target.value; // hämtar värdet från det som klickades på
-    setPizza(selectedPizza); // uppdaterar pizza state med värdet av den valda pizzan
-    console.log("Jag klicka på:", selectedPizza);
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => { 
+    const selectedPizza = event.target.value;
+    setPizza(selectedPizza);
+    
+    const selectedPizzaObj = Pizzas.find(pizza => pizza.name === selectedPizza);
+    if (selectedPizzaObj) {
+      setTotalPrice(selectedPizzaObj.price); // Uppdatera det totala priset med priset för den valda pizzan
+      console.log("välj pizza:", selectedPizza);
+    }
   };
 
-  // selectedPizzaObj kollar med hjälp av find metoden om det finns en pizza med det valda namnet från dropdown menyn.
+  const handleIngredientChange = (e: React.ChangeEvent<HTMLInputElement>) => { // hantering av tillägg som event
+    const ingredient = e.target.value;
+    const isChecked = e.target.checked;
+
+    if (isChecked) {
+      setSelectedIngredients([...selectedIngredients, ingredient]);
+      setTotalPrice(totalPrice + 10); // Lägg till 10 kr till totalpriset när ingrediensen väljs
+    } else {
+      setSelectedIngredients(selectedIngredients.filter(item => item !== ingredient));
+      setTotalPrice(totalPrice - 10); // Dra av 10 kr från totalpriset när ingrediensen avmarkeras
+    }
+  };
+
   const selectedPizzaObj = Pizzas.find((pizzaObj) => pizzaObj.name === pizza);
 
   return (
     <>
       <label htmlFor='size-select'>Choose a pizza size:</label>
-
       <select
         name='pizza'
         id='pizza-select'
@@ -31,24 +49,31 @@ const PizzaSizeDropdown = () => {
           </option>
         ))}
       </select>
-      {/* selectedpizzaobj kollar om vi har information om en pizza, har vi det så körs PizzainfoBox */}
+
       {selectedPizzaObj && (
         <>
-          {/* PizzaInfoBox*/}
           <PizzaInfoBox
             name={selectedPizzaObj.name}
             price={selectedPizzaObj.price}
           />
-          {/*nästlad array som renderar ut ingredienser som checkboxes */}
+          {/* Rendera ingredienser som checkboxes */}
           {selectedPizzaObj.ingredients.map((ingredient, index) => (
             <div key={index}>
-              <input type='checkbox' id='index' value={ingredient} />
-              <label htmlFor={index.toString()}>{ingredient}</label>
+              <input 
+                type='checkbox' 
+                id={`ingredient-${index}`} 
+                name='ingredient' 
+                value={ingredient} 
+                onChange={handleIngredientChange} 
+              />
+              <label htmlFor={`ingredient-${index}`}>{ingredient}  10 kr</label>
             </div>
           ))}
+          <p>Total Price: {totalPrice} kr</p>
         </>
       )}
     </>
   );
 };
+
 export default PizzaSizeDropdown;
