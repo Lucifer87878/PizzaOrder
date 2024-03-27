@@ -20,14 +20,15 @@ const Checkbox: React.FC<checkboxProps> = () => {
   return (
     <>
       <section className='Checkboxes'>
-        <div>
+        <div> 
+          <h1>Extra +15 kr</h1>
           <input
             type='checkbox'
             name='ost'
             checked={checkboxes.ost}
             onChange={handleCheckboxChange}
           />
-          <label htmlFor='ost'>Extra Fetaost</label>
+          <label htmlFor='ost'>Fetaost</label>
         </div>
         <div>
           <input
@@ -36,7 +37,7 @@ const Checkbox: React.FC<checkboxProps> = () => {
             checked={checkboxes.kött}
             onChange={handleCheckboxChange}
           />
-          <label htmlFor='kött'>Extra Kött</label>
+          <label htmlFor='kött'>Kött</label>
         </div>
         <div>
           <input
@@ -45,7 +46,7 @@ const Checkbox: React.FC<checkboxProps> = () => {
             checked={checkboxes.sås}
             onChange={handleCheckboxChange}
           />
-          <label htmlFor='sås'>Extra sås</label>
+          <label htmlFor='sås'>Sås</label>
         </div>
         <div>
           <input
@@ -54,7 +55,7 @@ const Checkbox: React.FC<checkboxProps> = () => {
             checked={checkboxes.lök}
             onChange={handleCheckboxChange}
           />
-          <label htmlFor='lök'>Extra Lök</label>
+          <label htmlFor='lök'>Lök</label>
         </div>
       </section>
     </>

@@ -3,21 +3,19 @@ import "../sass/_paragraph.scss";
 import "../sass/_paragraph.scss";
 import "../sass/_InfoBox.scss";
 
+import Calculator from "../Calculator/Calculator";
+
 import "../Data/pizzaSizes.json";
 import "../sass/_buttons.scss";
 
-type PizzaType = {
-  name: string;
-  price: number;
-};
 
-const PizzaInfoBox = ({ name, price }: PizzaType) => {
+const PizzaInfoBox = ({ name, price,size }: PizzaType) => {
   return (
     <>
       <div className='info-box'>
         <h2>Du har valt: </h2>
         {/* får inte glömma och skapa en scss fil för h3*/}
-        <u>{name}</u> <br />
+        <u>{name} {size} </u> <br />
         <div>
           Pris: {price}
           <br />
