@@ -16,11 +16,10 @@ function App() {
     <>
       <NavBar />
       <Header />
-      {/* <ToppingsDropdown /> */}
+
       <PizzaSizeDropdown />
 
       <Button />
-      {/* <Checkbox /> */}
     </>
   );
 }
