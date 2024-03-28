@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import "../sass/_Checkbox.scss";
 
 //Interface checkbox för att event inte skulle ha type any!
