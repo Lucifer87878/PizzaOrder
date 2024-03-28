@@ -57,9 +57,10 @@ const PizzaSizeDropdown = () => {
             price={selectedPizzaObj.price}
           />
           {/* Rendera ingredienser som checkboxes */}
+          <div className="check-Box">
           {selectedPizzaObj.ingredients.map((ingredient, index) => (
             <div key={index}>
-              <input className="check-Box"
+              <input
                 type='checkbox' 
                 id={`ingredient-${index}`} 
                 name='ingredient' 
@@ -69,6 +70,7 @@ const PizzaSizeDropdown = () => {
               <label htmlFor={`ingredient-${index}`}>{ingredient}  10 kr</label>
             </div>
           ))}
+          </div>
           <p className="TP-P1">Total Price: {totalPrice} kr</p>
         </>
       )}
