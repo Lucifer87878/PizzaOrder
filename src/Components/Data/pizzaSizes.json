@@ -9,7 +9,7 @@
       "Champinjoner",
       "Oregano"
     ],
-    "price": 70
+    "price": 40
   },
   {
     "name": "Pizza - Vuxen",
@@ -25,7 +25,7 @@
       "Oliver",
       "Oregano"
     ],
-    "price": 120
+    "price": 60
   },
   {
     "name": "Pizza - Familj",
@@ -42,6 +42,6 @@
       "Ananas",
       "Oregano"
     ],
-    "price": 130
+    "price": 80
   }
 ]

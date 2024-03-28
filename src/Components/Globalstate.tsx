@@ -1,37 +1,26 @@
-import React, { useReducer,createContext } from "react";
+import React, { useReducer, createContext } from "react";
 
 import uuid from "react-uuid";
 // Skapa en type av size som kan vara ett av tre alternativ
-type PizzaSize = "small"|"large"|"family";
+type PizzaSize = "small" | "large" | "family";
+
 // kopplia ihop pizzatype med pizza size
 type PizzaType = {
-  id:string;
-  size:PizzaSize;
+  id: string;
+  size: PizzaSize;
   name: string;
   price: number;
   topping: Array<string>;
-  
 };
-type GlobalState = { 
-
-     PizzaList:PizzaType [];
-
+type GlobalState = {
+  PizzaList: PizzaType[];
 };
-const initialState: GlobalState ={
-//  hur sätter vi vad en small ska kosta?
-    PizzaList: [
-            { 
-                id: uuid(),
-                size:"small",
-                name: "hawaii",
-                price: 30,
-                topping:["pineapple", "spam"],
-              
-
-            }
-        ],
-    
-
+const initialState: GlobalState = {
+  //  hur sätter vi vad en small ska kosta?
+  PizzaList: [],
 };
 // skapa metoder för att byta storlek på pizzan och lägga till, ta bort toppings
-type Action = | {type: "Switch size";payload:PizzaSize } | {type: "Add Topping"; payload:string} | {type :"Remove Topping"; }
+type Action =
+  | { type: "Switch size"; payload: PizzaSize }
+  | { type: "Add Topping"; payload: string }
+  | { type: "Remove Topping"; payload: string };
