@@ -5,7 +5,7 @@ import uuid from "react-uuid";
 type PizzaSize = "small" | "large" | "family";
 
 type PizzaOrder ={
-    PizzaType:[{ id:"",price:''}],
+    PizzaType:[{ id:"",price:null}],
 
 
 }
@@ -36,7 +36,8 @@ type Action =
   | { type: "Remove_Topping"; payload: string }
   | {type: "Add_Pizza_to_order"; payload:PizzaType }
   | {type: "Sum_Order"; payload:PizzaType}
-
+  
+  // switch 
 
   export const GlobalStateContext = createContext <{state:GlobalState;
   }>({
