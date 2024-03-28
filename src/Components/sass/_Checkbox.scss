@@ -1,8 +1,9 @@
+// extra tilläg rutorna
 .Checkboxes {
   width: 10%;
-  border: 0.1rem solid black;
+  border: 0.1rem solid rgb(255, 0, 0);
   flex-wrap: wrap;
   flex-direction: column;
-  display: flexbox;
+  display: flex;
   justify-content: center;
 }
