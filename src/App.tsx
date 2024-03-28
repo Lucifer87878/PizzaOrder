@@ -13,11 +13,11 @@ function App() {
     <>
       <NavBar />
       <Header />
-      <ToppingsDropdown />
+      {/* <ToppingsDropdown /> */}
       <PizzaSizeDropdown />
 
       <Button />
-      <Checkbox />
+      {/* <Checkbox /> */}
     </>
   );
 }
