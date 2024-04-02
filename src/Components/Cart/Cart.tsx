@@ -1,3 +1,5 @@
+import "../sass/Cart.scss";
+
 const Cart = ({ items }: { items: any[] }) => {
   const calculateTotalPrice = () => {
     let totalPrice = 0;
@@ -8,7 +10,7 @@ const Cart = ({ items }: { items: any[] }) => {
   };
 
   return (
-    <div className="cart">
+    <div className='cart'>
       <h2>🍕Cart🍕</h2>
       <ul>
         {items.map((item, index) => (
