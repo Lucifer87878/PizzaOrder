@@ -77,7 +77,8 @@ const PizzaSizeDropdown = () => {
               <label htmlFor={`ingredient-${index}`}>{ingredient} 10 kr</label>
             </div>
           ))}
-          <p className='TP-P1'>Total Price: {totalPrice} kr</p>
+          </div>
+          <p className="TP-P1">🍕Total Price: {totalPrice} kr</p>
         </>
       )}
     </>
