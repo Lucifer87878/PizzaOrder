@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./Components/Header/Header";
-import Button from "./Components/Button";
+// import Button from "./Components/Button";
 import PizzaSizeDropdown from "./Components/PizzaSizeDropdown/PizzaSizeDropdown";
 import NavBar from "./Components/Navbar/Navbar";
 
@@ -19,7 +19,7 @@ function App() {
 
       <PizzaSizeDropdown />
 
-      <Button />
+      {/* <Button /> */}
     </>
   );
 }
