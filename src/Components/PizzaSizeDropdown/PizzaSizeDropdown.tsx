@@ -24,6 +24,7 @@ const PizzaSizeDropdown = () => {
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setPizza(event.target.value);
+    setSelectedIngredients([]);
   };
 
   const handleIngredientChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,7 +34,9 @@ const PizzaSizeDropdown = () => {
     if (isChecked) {
       setSelectedIngredients([...selectedIngredients, ingredient]);
     } else {
-      setSelectedIngredients(selectedIngredients.filter((item) => item !== ingredient));
+      setSelectedIngredients(
+        selectedIngredients.filter((item) => item !== ingredient)
+      );
     }
   };
 
@@ -41,7 +44,7 @@ const PizzaSizeDropdown = () => {
     const cartItem = {
       pizza: pizza,
       ingredients: selectedIngredients,
-      price: calculateTotalPrice() // Beräkna totalpriset
+      price: calculateTotalPrice(), // Beräkna totalpriset
     };
     setCartItems([...cartItems, cartItem]);
     setPizza("");
@@ -81,7 +84,7 @@ const PizzaSizeDropdown = () => {
             name={selectedPizzaObj.name}
             price={selectedPizzaObj.price}
           />
-          <div className="check-Box">
+          <div className='check-Box'>
             {selectedPizzaObj.ingredients.map((ingredient, index) => (
               <div key={index}>
                 <input
@@ -90,18 +93,21 @@ const PizzaSizeDropdown = () => {
                   id={`ingredient-${index}`}
                   name='ingredient'
                   value={ingredient}
+                  checked={selectedIngredients.includes(ingredient)}
                   onChange={handleIngredientChange}
                 />
-                <label htmlFor={`ingredient-${index}`}>{ingredient} 10 kr</label>
+                <label htmlFor={`ingredient-${index}`}>
+                  {ingredient} 10 kr
+                </label>
               </div>
             ))}
           </div>
-          <p className="TP-P1">🍕Total Price: {calculateTotalPrice()} kr</p>
+          <p className='TP-P1'>🍕Total Price: {calculateTotalPrice()} kr</p>
           {/* Använd din Button-komponent för att visa Checkout-knappen */}
-          <Button onClick={handleCheckout} text="Checkout" />
+          <Button onClick={handleCheckout} text='Checkout' />
           {/* Ny knapp för att betala */}
           {cartItems.length > 0 && (
-            <Button onClick={handlePayment} text="Pay" />
+            <Button onClick={handlePayment} text='Pay' />
           )}
         </>
       )}
