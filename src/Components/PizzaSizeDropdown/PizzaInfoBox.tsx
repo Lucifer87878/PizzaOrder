@@ -3,7 +3,7 @@ import "../sass/_paragraph.scss";
 import "../sass/_paragraph.scss";
 import "../sass/_InfoBox.scss";
 
-import Calculator from "../Calculator/Calculator";
+
 
 import "../Data/pizzaSizes.json";
 import "../sass/_buttons.scss";
