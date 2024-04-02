@@ -10,16 +10,8 @@ const PizzaSizeDropdown = () => {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedPizza = event.target.value;
     setPizza(selectedPizza);
-
-    const selectedPizzaObj = Pizzas.find(
-      (pizza) => pizza.name === selectedPizza
-    );
-        //--- detta tar bort buggen med priset vi hämtar detta sen med cart ---//
-
-    // if (selectedPizzaObj) {
-    //   setTotalPrice(selectedPizzaObj.price); // Uppdatera det totala priset med priset för den valda pizzan
-    //   console.log("välj pizza:", selectedPizza);
-    // }
+    setSelectedIngredients([]); // reset selected ingredients when pizza changes from menu
+    setTotalPrice(0); // reset total topping price when pizza changes
   };
 
   const handleIngredientChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,22 +57,25 @@ const PizzaSizeDropdown = () => {
             price={selectedPizzaObj.price}
           />
           {/* Rendera ingredienser som checkboxes */}
-          <div className="check-Box">
-          {selectedPizzaObj.ingredients.map((ingredient, index) => (
-            <div key={index}>
-              <input
-                className='check-Box'
-                type='checkbox'
-                id={`ingredient-${index}`}
-                name='ingredient'
-                value={ingredient}
-                onChange={handleIngredientChange}
-              />
-              <label htmlFor={`ingredient-${index}`}>{ingredient} 10 kr</label>
-            </div>
-          ))}
+          <div className='check-Box'>
+            {selectedPizzaObj.ingredients.map((ingredient, index) => (
+              <div key={index}>
+                <input
+                  className='check-Box'
+                  type='checkbox'
+                  id={`ingredient-${index}`}
+                  name='ingredient'
+                  value={ingredient}
+                  checked={selectedIngredients.includes(ingredient)}
+                  onChange={handleIngredientChange}
+                />
+                <label htmlFor={`ingredient-${index}`}>
+                  {ingredient} 10 kr
+                </label>
+              </div>
+            ))}
           </div>
-          <p className="TP-P1">🍕Topping's Price: {totalPrice} kr</p>
+          <p className='TP-P1'>🍕Topping's Price: {totalPrice} kr</p>
         </>
       )}
     </>
