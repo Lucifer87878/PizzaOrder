@@ -1,6 +1,21 @@
-/* #root {
-  max-width: 1280px;
+#root {
   margin: 0 auto;
-  padding: 2rem;
-  
-} */
+}
+
+.PizzaSizeDropdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 20px; 
+}
+
+.Drop-D1 {
+  grid-column: 1 / span 2; 
+}
+
+.check-Box {
+  grid-column: 1 / span 2; 
+}
+
+.TP-P1 {
+  grid-column: 1 / span 2; 
+}
