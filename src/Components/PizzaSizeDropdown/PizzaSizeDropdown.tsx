@@ -14,10 +14,12 @@ const PizzaSizeDropdown = () => {
     const selectedPizzaObj = Pizzas.find(
       (pizza) => pizza.name === selectedPizza
     );
-    if (selectedPizzaObj) {
-      setTotalPrice(selectedPizzaObj.price); // Uppdatera det totala priset med priset för den valda pizzan
-      console.log("välj pizza:", selectedPizza);
-    }
+        //--- detta tar bort buggen med priset vi hämtar detta sen med cart ---//
+
+    // if (selectedPizzaObj) {
+    //   setTotalPrice(selectedPizzaObj.price); // Uppdatera det totala priset med priset för den valda pizzan
+    //   console.log("välj pizza:", selectedPizza);
+    // }
   };
 
   const handleIngredientChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -78,7 +80,7 @@ const PizzaSizeDropdown = () => {
             </div>
           ))}
           </div>
-          <p className="TP-P1">🍕Total Price: {totalPrice} kr</p>
+          <p className="TP-P1">🍕Topping's Price: {totalPrice} kr</p>
         </>
       )}
     </>
