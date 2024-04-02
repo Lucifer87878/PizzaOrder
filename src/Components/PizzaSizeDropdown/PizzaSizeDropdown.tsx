@@ -71,7 +71,7 @@ const PizzaSizeDropdown = () => {
             </div>
           ))}
           </div>
-          <p className="TP-P1">Total Price: {totalPrice} kr</p>
+          <p className="TP-P1">🍕Total Price: {totalPrice} kr</p>
         </>
       )}
     </>
