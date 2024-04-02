@@ -19,3 +19,8 @@
 .TP-P1 {
   grid-column: 1 / span 2; 
 }
+
+.cart {
+  border: .1rem solid black;
+  width: 20%;
+}
