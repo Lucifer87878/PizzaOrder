@@ -1,3 +1,5 @@
+import "../sass/Cart.scss";
+
 const Cart = ({ items }: { items: any[] }) => {
   const calculateTotalPrice = () => {
     let totalPrice = 0;
