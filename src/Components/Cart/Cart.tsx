@@ -10,8 +10,8 @@ const Cart = ({ items }: { items: any[] }) => {
   };
 
   return (
-    <div className="cart">
-      <h2>🍕Cart🍕</h2>
+    <div className='cart'>
+      <h2>🍕Cart🛒🍕</h2>
       <ul>
         {items.map((item, index) => (
           <li key={index}>
@@ -27,7 +27,7 @@ const Cart = ({ items }: { items: any[] }) => {
         ))}
       </ul>
       {/* Rendera separat totalpris i varukorgen */}
-      <p>Total Price in Cart: {calculateTotalPrice()} kr🍕</p>
+      <p>Total Price in Cart: {calculateTotalPrice()} 💰🍕</p>
     </div>
   );
 };
