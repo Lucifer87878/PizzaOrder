@@ -1,4 +1,4 @@
-import "../sass/Cart.scss";
+import "../sass/_Cart.scss";
 
 const Cart = ({ items }: { items: any[] }) => {
   const calculateTotalPrice = () => {
