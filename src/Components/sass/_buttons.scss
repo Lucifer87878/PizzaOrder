@@ -1,6 +1,6 @@
 // När vi implementerar denna en knapp i vilken komponent som helst så har vi med oss
 // en färdig knapp
-@import 'colors';
+@import "colors";
 
 .CheckoutBtn {
   display: inline-block;
@@ -13,6 +13,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 15px;
 
   &:hover {
     background-color: $H-BG-Color;
@@ -26,10 +27,4 @@
   &:active {
     transform: translateY(1px);
   }
-}
-.ToppingsBtn{
-
-  display: flex;
-  flex-direction: column;
-  width: 10%;
 }

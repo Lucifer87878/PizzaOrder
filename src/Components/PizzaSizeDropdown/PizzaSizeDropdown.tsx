@@ -107,7 +107,6 @@ const PizzaSizeDropdown = () => {
               <p className='TP-P1'>🍕Total Price: {calculateTotalPrice()} kr</p>
               {/* Använd din Button-komponent för att visa Checkout-knappen */}
               <Button onClick={handleCheckout} text='Checkout' />
-
               {cartItems.length > 0 && (
                 <Button onClick={handlePayment} text='Pay' />
               )}
