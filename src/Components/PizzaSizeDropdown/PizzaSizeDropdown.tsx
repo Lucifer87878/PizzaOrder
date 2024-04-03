@@ -3,6 +3,7 @@ import Pizzas from "../Data/pizzaSizes.json";
 import PizzaInfoBox from "./PizzaInfoBox";
 import Button from "../Button";
 import Cart from "../Cart/Cart";
+import "../sass/_Cart.scss";
 
 const PizzaSizeDropdown = () => {
   const [pizza, setPizza] = useState<string>("");

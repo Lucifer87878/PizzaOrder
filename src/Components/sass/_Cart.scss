@@ -1,20 +1,15 @@
-@import 'colors';
+@import "colors";
 
-.grid-container{
-    display:grid;
-    grid-template-areas:
-    'cart';
-    
-    ;
+.grid-container {
+  display: grid;
+  grid-template-areas: "cart";
 }
-.cart{
-    position: absolute;
-    border: .2rem solid black;
-    width: 25%;
-    right: 15rem ;
-    top: 15rem;
-    display: flexbox;
-    justify-content: center;
-     
-
+.cart {
+  position: absolute;
+  border: 0.2rem solid black;
+  width: 25%;
+  right: 15rem;
+  top: 15rem;
+  display: flexbox;
+  justify-content: center;
 }
