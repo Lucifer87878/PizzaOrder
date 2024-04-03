@@ -1,5 +1,6 @@
 #root {
   margin: 0 auto;
+  background-color: gray;
 }
 
 .PizzaSizeDropdown {
@@ -8,17 +9,7 @@
   grid-gap: 20px; 
 }
 
-.Drop-D1 {
-  grid-column: 1 / span 2; 
-}
 
-.check-Box {
-  grid-column: 1 / span 2; 
-}
-
-.TP-P1 {
-  grid-column: 1 / span 2; 
-}
 
 .cart {
   border: .1rem solid black;
