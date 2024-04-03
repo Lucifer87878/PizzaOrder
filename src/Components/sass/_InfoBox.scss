@@ -18,11 +18,9 @@
   font-size: 16px;
 }
 
-.check-Box {
-  // border: 0.1rem solid black;
+input[type="check-Box"] {
   width: 20%;
-  // align-items: center;
-  // grid-area: 3/3;
+  border-radius: 5px;
 }
 
 // Total pris disply kan styilas här

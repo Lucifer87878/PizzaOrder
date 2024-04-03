@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Pizzas from "../Data/pizzaSizes.json";
 import PizzaInfoBox from "./PizzaInfoBox";
-import Button from "../Button"; // Importera din Button-komponent
+import Button from "../Button";
 import Cart from "../Cart/Cart";
 
 const PizzaSizeDropdown = () => {
@@ -44,7 +44,7 @@ const PizzaSizeDropdown = () => {
     const cartItem = {
       pizza: pizza,
       ingredients: selectedIngredients,
-      price: calculateTotalPrice(), // Beräkna totalpriset
+      price: calculateTotalPrice(),
     };
     setCartItems([...cartItems, cartItem]);
     setPizza("");
@@ -52,7 +52,7 @@ const PizzaSizeDropdown = () => {
   };
 
   const handlePayment = () => {
-    // Töm korgen när användaren betalar
+    // Töm korgarna när användaren betalar
     setCartItems([]);
     setPizza("");
     setSelectedIngredients([]);
@@ -107,7 +107,7 @@ const PizzaSizeDropdown = () => {
               <p className='TP-P1'>🍕Total Price: {calculateTotalPrice()} kr</p>
               {/* Använd din Button-komponent för att visa Checkout-knappen */}
               <Button onClick={handleCheckout} text='Checkout' />
-              {/* Ny knapp för att betala */}
+
               {cartItems.length > 0 && (
                 <Button onClick={handlePayment} text='Pay' />
               )}
