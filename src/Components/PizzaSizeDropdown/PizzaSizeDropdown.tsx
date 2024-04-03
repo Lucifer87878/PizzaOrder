@@ -14,7 +14,7 @@ const PizzaSizeDropdown = () => {
     const selectedPizzaObj = Pizzas.find((pizzaObj) => pizzaObj.name === pizza);
     let totalPrice = selectedPizzaObj ? selectedPizzaObj.price : 0;
 
-    selectedIngredients.forEach((ingredient) => {
+    selectedIngredients.forEach((_ingredient) => {
       // Tilläggskostnaden för varje tillval (10 kr per tillval)
       totalPrice += 10;
     });
