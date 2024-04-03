@@ -89,7 +89,6 @@ const PizzaSizeDropdown = () => {
               {selectedPizzaObj.ingredients.map((ingredient, index) => (
                 <div key={index}>
                   <input
-                    className='check-Box'
                     type='checkbox'
                     id={`ingredient-${index}`}
                     name='ingredient'
